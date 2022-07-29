@@ -14,5 +14,5 @@ install:
 
 build_script:
   - chmod +x gradlew
-  - chmod +x driver/linux/chromedriver
+  - chmod +x driver/linux/chromedriver.exe
   - ./gradlew test -Dselenide.headless=true --info # запускаем тест, флаг --info позволяет выводить больше информации
