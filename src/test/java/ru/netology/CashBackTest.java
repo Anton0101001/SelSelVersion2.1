@@ -9,11 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.params.shadow.com.univocity.parsers.conversions.Conversions.trim;
 
 
 public class CashBackTest {
@@ -43,8 +41,6 @@ public class CashBackTest {
     @Test
     public void testCard1() {
         driver.get("http://localhost:9999/");
-//        driver.findElement().sendKeys("Петров Иван");
-//        driver.findElement().sendKeys("+79001112233");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Петров Иван");
         elements.get(1).sendKeys("+79001112233");
