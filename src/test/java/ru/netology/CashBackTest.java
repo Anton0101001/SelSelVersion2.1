@@ -18,20 +18,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashBackTest {
     private WebDriver driver;
-    private static ChromeOptions options;
+
 
 
     @BeforeAll
 
     public static void setUpAll() {
-        options = new ChromeOptions();
-        options.addArguments("--headless");
-        System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver");
+
+       System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver");
 
     }
 
     @BeforeEach
     public void setUp() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
 
     }
@@ -44,7 +47,7 @@ public class CashBackTest {
     }
 
     @Test
-    public void testCard1() {
+    public void Card1() {
         driver.get("http://localhost:9999/");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Петров Иван");
