@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 
 import java.util.List;
 
@@ -16,18 +18,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashBackTest {
     private WebDriver driver;
+    private static ChromeOptions options;
 
 
     @BeforeAll
 
     public static void setUpAll() {
+        options = new ChromeOptions();
+        options.addArguments("--headless");
         System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver");
 
     }
 
     @BeforeEach
     public void setUp() {
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
 
     }
 
