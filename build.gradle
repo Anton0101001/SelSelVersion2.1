@@ -20,6 +20,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     testImplementation 'com.codeborne:selenide:6.6.3'
     testImplementation("io.github.bonigarcia:webdrivermanager:5.2.2")
+    testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.36'
 }
 
 test {
