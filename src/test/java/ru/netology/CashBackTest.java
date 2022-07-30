@@ -20,12 +20,9 @@ public class CashBackTest {
     private WebDriver driver;
 
 
-
     @BeforeAll
-
     public static void setUpAll() {
-
-       System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "driver/linux/chromedriver.exe");
 
     }
 
