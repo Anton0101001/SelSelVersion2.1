@@ -1,6 +1,5 @@
 package ru.netology;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,9 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-
 import java.util.List;
 
+import static com.codeborne.selenide.Selenide.open;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -23,7 +22,8 @@ public class CashBackTest {
 
     @BeforeAll
     public static void setUpAll() {
-        WebDriverManager.chromedriver().setup();
+        open("http://localhost:9999");
+//        WebDriverManager.chromedriver().setup();
 
     }
 
