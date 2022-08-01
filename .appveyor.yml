@@ -17,4 +17,4 @@ build_script:
   - ./gradlew test --info
 #  - chmod +x gradlew
 #  - chmod +x WebDriverManager.chromedriver().setup()
-#  - ./gradlew test -Dselenide.headless=true --info # запускаем тест, флаг --info позволяет выводить больше информации
+#  - ./gradlew test -Dselenide.headless=true --info # запускаем тест,  флаг --info позволяет выводить больше информации
