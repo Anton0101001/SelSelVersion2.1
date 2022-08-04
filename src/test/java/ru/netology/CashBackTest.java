@@ -45,10 +45,10 @@ public class CashBackTest {
     public void Card1() {
         driver.get("http://localhost:9999/");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Петров Иван");
-        elements.get(1).sendKeys("+79001112233");
-        driver.findElement(By.className("checkbox__box")).click();
-        driver.findElement(By.className("button")).click();
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иван Петров-Сидоров");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79001112233");
+        driver.findElement(By.cssSelector("[data-test-id=agreement] .checkbox__box")).click();
+        driver.findElement(By.cssSelector("button")).click();
         String actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText();
         String expected = ("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.");
         assertEquals(expected, actualText.trim());
